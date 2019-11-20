@@ -1,4 +1,4 @@
-package edu.wctc.controller;
+package edu.wctc.controller.pm;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
