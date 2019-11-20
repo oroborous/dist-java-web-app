@@ -32,6 +32,8 @@
                 username-parameter="username"
                 password-parameter="password"
                 default-target-url="/donut/list"/>
+        <security:logout logout-url="/logout"
+                         logout-success-url="/showLoginForm?logout=true"/>
     </security:http>
 
     <security:authentication-manager id="myAuthenticationManager" >
@@ -106,7 +108,7 @@
     <!-- END NEW HIBERNATE CONFIGURATION -->
 
     <!-- Support for component scanning -->
-    <context:component-scan base-package="edu.wctc.dao, edu.wctc.controller, edu.wctc.service"/>
+    <context:component-scan base-package="edu.wctc.dao, edu.wctc.controller.am, edu.wctc.service"/>
 
     <!-- Support for conversion, formatting, and validation -->
     <mvc:annotation-driven conversion-service="myConversionService"/>
