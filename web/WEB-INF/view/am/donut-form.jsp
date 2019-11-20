@@ -21,7 +21,7 @@
 
     <div id="content">
 
-        <form:form action="${contextPath}/donut/user/save" enctype="multipart/form-data" modelAttribute="donut"
+        <form:form action="${contextPath}/donut/save" enctype="multipart/form-data" modelAttribute="donut"
                    method="post">
             <form:hidden path="id" value="${donut.id}"/>
             <form:hidden path="imageFilename" value="${donut.imageFilename}"/>
