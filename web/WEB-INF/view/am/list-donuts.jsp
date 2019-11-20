@@ -46,12 +46,12 @@
 
                 <!-- construct an "update" link with donut id -->
                 <!-- c:url is same as JSP's response.encodeURL() -->
-                <c:url var="updateLink" value="/donut/user/showUpdateDonutForm">
+                <c:url var="updateLink" value="/donut/showUpdateDonutForm">
                     <c:param name="donutId" value="${tempDonut.id}"/>
                 </c:url>
 
                 <!-- construct a "delete" link with donut id -->
-                <c:url var="deleteLink" value="/donut/user/delete">
+                <c:url var="deleteLink" value="/donut/delete">
                     <c:param name="donutId" value="${tempDonut.id}"/>
                 </c:url>
 
