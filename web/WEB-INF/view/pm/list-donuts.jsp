@@ -22,7 +22,7 @@
         <!-- add donut button -->
 
         <button class="add-button"
-                onclick="window.location.href='${contextPath}/donut/user/showAddDonutForm'; return false;">Add Donut
+                onclick="window.location.href='${contextPath}/donut/showAddDonutForm'; return false;">Add Donut
         </button>
 
         <!-- search form -->
