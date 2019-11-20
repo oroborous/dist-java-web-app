@@ -1,4 +1,4 @@
-package edu.wctc.controller;
+package edu.wctc.controller.am;
 
 
 import edu.wctc.entity.Donut;
