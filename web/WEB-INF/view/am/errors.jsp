@@ -7,11 +7,8 @@
     <link type="text/css" rel="stylesheet" href="${contextPath}/resources/css/style.css">
 </head>
 <body>
-<div id="wrapper">
-    <div id="header">
-        <h2>Donut Reviews</h2>
-    </div>
-</div>
+
+<%@include file="/WEB-INF/view/am/includes/header.jsp"%>
 
 <div id="container">
     <div id="content">
