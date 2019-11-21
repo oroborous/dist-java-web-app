@@ -108,7 +108,7 @@
     <!-- END NEW HIBERNATE CONFIGURATION -->
 
     <!-- Support for component scanning -->
-    <context:component-scan base-package="edu.wctc.dao, edu.wctc.controller.am, edu.wctc.service"/>
+    <context:component-scan base-package="edu.wctc.dao, edu.wctc.controller.pm, edu.wctc.service"/>
 
     <!-- Support for conversion, formatting, and validation -->
     <mvc:annotation-driven conversion-service="myConversionService"/>
@@ -123,7 +123,7 @@
 
         <!-- Basically, where to look for view files -->
         <!-- Be sure to create this folder! -->
-        <property name="prefix" value="/WEB-INF/view/am/"/>
+        <property name="prefix" value="/WEB-INF/view/pm/"/>
         <property name="suffix" value=".jsp"/>
     </bean>
 

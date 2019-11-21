@@ -49,7 +49,7 @@ public class DonutController {
         return "list-donuts";
     }
 
-    @RequestMapping("/showAddDonutForm")
+    @RequestMapping("/user/showAddDonutForm")
     public String showAddDonutForm(Model theModel) {
         Donut theDonut = new Donut();
 

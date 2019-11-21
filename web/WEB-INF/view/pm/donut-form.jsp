@@ -11,11 +11,7 @@
 </head>
 <body>
 
-<div id="wrapper">
-    <div id="header">
-        <h2>Donut Reviews</h2>
-    </div>
-</div>
+<%@include file="/WEB-INF/view/pm/includes/header.jsp"%>
 
 <div id="container">
 
@@ -65,11 +61,7 @@
             </table>
         </form:form>
 
-        <div style="clear: both;">
-            <p>
-                <a href="${contextPath}/donut/list">Back to List</a>
-            </p>
-        </div>
+        <%@include file="/WEB-INF/view/pm/includes/footer.jsp"%>
 
     </div>
 </div>

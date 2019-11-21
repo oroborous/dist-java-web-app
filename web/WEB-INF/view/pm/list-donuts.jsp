@@ -9,11 +9,7 @@
 </head>
 <body>
 
-<div id="wrapper">
-    <div id="header">
-        <h2>Donut Reviews</h2>
-    </div>
-</div>
+<%@include file="/WEB-INF/view/pm/includes/header.jsp"%>
 
 <div id="container">
 
@@ -22,7 +18,7 @@
         <!-- add donut button -->
 
         <button class="add-button"
-                onclick="window.location.href='${contextPath}/donut/showAddDonutForm'; return false;">Add Donut
+                onclick="window.location.href='${contextPath}/donut/user/showAddDonutForm'; return false;">Add Donut
         </button>
 
         <!-- search form -->
