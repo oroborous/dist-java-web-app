@@ -5,8 +5,8 @@
 <html>
 <head>
     <title>Login</title>
-    <link rel="stylesheet" type="text/css" href="${contextPath}/resources/css/style.css">
-    <link rel="stylesheet" type="text/css" href="${contextPath}/resources/css/donut-form-style.css">
+    <link type="text/css" rel="stylesheet" href="${contextPath}/resources/css/style.css">
+    <link type="text/css" rel="stylesheet" href="${contextPath}/resources/css/donut-form-style.css">
 </head>
 <body>
 <div id="wrapper">
@@ -17,26 +17,29 @@
 
 <div id="container">
     <div id="content">
-        <form:form method="POST" action="${contextPath}/authenticate">
+        <h3>Login</h3>
+        <form:form action="${contextPath}/authenticate" method="POST">
             <table>
+                <!-- Only show this message if the user has been logged out -->
                 <c:if test="${param.logout != null}">
                     <tr>
                         <td></td>
-                        <td class="error">You have been logged out</td>
+                        <td>You have been logged out</td>
                     </tr>
                 </c:if>
                 <tr>
-                    <td>Username</td>
-                    <td><input type="text" name="username" value="user"></td>
+                    <td><label>Username</label></td>
+                    <td><input type="text" name="username" value="user"></td> <!-- Spring expects this to have name="username" -->
                 </tr>
                 <tr>
-                    <td>Password</td>
-                    <td><input type="text" name="password" value="p"></td>
+                    <td><label>Password</label></td>
+                    <td><input type="text" name="password" value="p"></td> <!-- Spring expects this to have name="password" -->
                 </tr>
                 <tr>
                     <td></td>
                     <td><input type="submit" value="Login"></td>
                 </tr>
+                <!-- Only show this row if there was a login error -->
                 <c:if test="${param.error != null}">
                     <tr>
                         <td></td>
@@ -47,7 +50,7 @@
         </form:form>
     </div>
 
-    <%@include file="/WEB-INF/view/am/includes/footer.jsp"%>
+    <%@ include file="/WEB-INF/view/am/includes/footer.jsp" %>
 </div>
 </body>
 </html>

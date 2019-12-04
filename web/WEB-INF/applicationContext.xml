@@ -18,8 +18,8 @@
     <!-- BEGIN SECURITY CONFIGURATION -->
 
     <security:http use-expressions="true" authentication-manager-ref="myAuthenticationManager" >
-       <!-- <security:intercept-url pattern="/donut/admin/**" access="hasRole('ROLE_ADMIN')"/>-->
-        <security:intercept-url pattern="/donut/user/**" access="hasRole('ROLE_USER')"/>
+        <security:intercept-url pattern="/donut/admin/**" access="hasRole('ADMIN')"/>
+        <security:intercept-url pattern="/donut/user/**" access="hasRole('USER')"/>
         <security:intercept-url pattern="/resources/**" access="permitAll()"/>
         <security:intercept-url pattern="/**" access="permitAll()" />
 
@@ -39,8 +39,8 @@
     <security:authentication-manager id="myAuthenticationManager" >
         <security:authentication-provider>
             <security:user-service id="myUserService">
-                <security:user name="user" password="p" authorities="ROLE_USER"/>
-                <security:user name="admin" password="p" authorities="ROLE_USER,ROLE_ADMIN"/>
+                <security:user name="user" password="p" authorities="USER"/>
+                <security:user name="admin" password="p" authorities="USER,ADMIN"/>
             </security:user-service>
         </security:authentication-provider>
     </security:authentication-manager>
@@ -108,7 +108,7 @@
     <!-- END NEW HIBERNATE CONFIGURATION -->
 
     <!-- Support for component scanning -->
-    <context:component-scan base-package="edu.wctc.dao, edu.wctc.controller.pm, edu.wctc.service"/>
+    <context:component-scan base-package="edu.wctc.dao, edu.wctc.controller.am, edu.wctc.service"/>
 
     <!-- Support for conversion, formatting, and validation -->
     <mvc:annotation-driven conversion-service="myConversionService"/>
@@ -123,7 +123,7 @@
 
         <!-- Basically, where to look for view files -->
         <!-- Be sure to create this folder! -->
-        <property name="prefix" value="/WEB-INF/view/pm/"/>
+        <property name="prefix" value="/WEB-INF/view/am/"/>
         <property name="suffix" value=".jsp"/>
     </bean>
 

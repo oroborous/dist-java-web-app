@@ -17,6 +17,7 @@
           <element id="library" level="project" name="jstl:jstl:1.2" />
           <element id="library" level="project" name="org.hibernate.validator:hibernate-validator:6.1.0.Final" />
           <element id="library" level="project" name="derby-10.14.1.0" />
+          <element id="library" level="project" name="com.fasterxml.jackson.core:jackson-databind:2.10.1" />
         </element>
       </element>
     </root>
